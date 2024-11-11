@@ -5,6 +5,13 @@ import commonStyles from '~/styles/common-styles.module.scss';
 import { getUrlOriginWithPath } from '~/utils';
 import TypescriptSvg from '../../../src/assets/svg/typescript.svg';
 import ViteSvg from '../../../src/assets/svg/vite.svg';
+import { Button } from 'primereact/button';
+import { InputText } from 'primereact/inputtext';
+import { Card } from 'primereact/card';
+import { Divider } from 'primereact/divider';
+import 'primereact/resources/themes/saga-blue/theme.css';
+import 'primereact/resources/primereact.min.css';
+import 'primeicons/primeicons.css';
 
 export const loader = ({ request }: LoaderFunctionArgs) => {
     return { canonicalUrl: getUrlOriginWithPath(request.url) };
@@ -12,6 +19,45 @@ export const loader = ({ request }: LoaderFunctionArgs) => {
 
 export default function HomePage() {
     return (
+        <div>
+         <div style={{ textAlign: 'center', padding: '20px' }} >
+            <Button
+                label="Click Me"
+                icon="pi pi-check"
+                className="p-button-raised p-button-lg p-button-primary"
+            />
+            <h2>Welcome to Codux with PrimeReact!</h2>
+
+            <div style={{ marginTop: '20px' }}>
+                <Button
+                    label="Another Button"
+                    icon="pi pi-info-circle"
+                    className="p-button-raised p-button-lg p-button-secondary"
+                    style={{ marginLeft: '10px' }}
+                />
+            </div>
+
+            <div style={{ marginTop: '20px' }}>
+                <span className="p-float-label">
+                    <label htmlFor="input">Enter Name</label>
+                    <InputText id="input" />
+                </span>
+            </div>
+
+            <Divider />
+
+            <div style={{ display: 'flex', justifyContent: 'center', marginTop: '20px' }}>
+                <Card
+                    title="Cards Header"
+                    style={{ width: '25rem', boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.1)' }}
+                >
+                    <p className="p-m-0">
+                        This is some content inside the card. PrimeReact provides a comprehensive
+                        suite of UI components.
+                    </p>
+                </Card>
+            </div>
+        </div>
         <div className={styles.root}>
             <h2 className={styles.title}>Welcome to your App Homepage 🎉</h2>
             <span>
@@ -24,6 +70,7 @@ export default function HomePage() {
                 <img src={TypescriptSvg} width="12" />
                 Visit vitejs.dev to learn more.{' '}
             </p>
+        </div>
         </div>
     );
 }
