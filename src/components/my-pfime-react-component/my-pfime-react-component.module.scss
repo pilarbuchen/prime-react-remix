@@ -2,3 +2,20 @@
 
 .root {
 }
+.container {
+    margin: 10px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+.div1 {
+    font-size: 24px;
+    font-weight: bolder;
+}
+.dropdowncontainer {
+       margin-left: 1px;
+       margin-bottom: 10px;
+       margin-top: 20px
+}
+
+
