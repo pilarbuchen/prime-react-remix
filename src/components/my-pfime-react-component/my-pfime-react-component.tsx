@@ -108,11 +108,7 @@ const MyPrimeReactAppPage = () => {
                     <div className="col-12 lg:col-4" style={{ padding: '1rem' }}>
                         <Accordion
                             multiple
-                            className={classNames(
-                                'shadow-4',
-                                styles.accordion,
-                                styles.accordion1
-                            )}
+                            className={classNames('shadow-4', styles.accordion, styles.accordion1)}
                         >
                             <AccordionTab header="Quick Stats" className="container">
                                 <div className="mb-4">
@@ -121,12 +117,26 @@ const MyPrimeReactAppPage = () => {
                                 </div>
                                 <div className="flex gap-3">
                                     <div>
-                                        <div  className={styles.dropdowncontainer} >
+                                        <div className={styles.dropdowncontainer}>
                                             <Badge value="New" severity="info" size="large" />
                                         </div>
-                                      
-                                      <div  className={styles.dropdowncontainer}>  <Badge value="Updated" severity="warning" size="large" /> </div>
-                                      <div  className={styles.dropdowncontainer}>  <Badge value="Complete" severity="success" size="large" /> </div>
+
+                                        <div className={styles.dropdowncontainer}>
+                                            {' '}
+                                            <Badge
+                                                value="Updated"
+                                                severity="warning"
+                                                size="large"
+                                            />{' '}
+                                        </div>
+                                        <div className={styles.dropdowncontainer}>
+                                            {' '}
+                                            <Badge
+                                                value="Complete"
+                                                severity="success"
+                                                size="large"
+                                            />{' '}
+                                        </div>
                                     </div>
                                 </div>
                             </AccordionTab>
@@ -153,10 +163,17 @@ const MyPrimeReactAppPage = () => {
                                     icon="pi pi-user"
                                     size="xlarge"
                                     className="mb-4"
-                                    style={{ backgroundColor: '#4f46e5', color: '#ffffff' }}
+                                    style={{ backgroundColor: '#7b2b5d', color: '#d51616' }}
                                 />
                                 <h3 className="text-white mb-3">Special Feature</h3>
-                                <p className="text-center text-gray-300 mb-4">
+                                <p
+                                    className={classNames(
+                                        'text-center',
+                                        'text-gray-300',
+                                        'mb-4',
+                                        styles.p1
+                                    )}
+                                >
                                     Discover our amazing features and boost your productivity today!
                                 </p>
                                 <Button
